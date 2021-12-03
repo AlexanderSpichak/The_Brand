@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>THE BRAND</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="wrapper">
+
+        <div class="top">
+
+            <header class="header">
+                <nav class="container header__inner">
+                    <ul class="header__left">
+                        <li class="header__item"><a href="index.html"><img src="img/logo.svg" alt="logo"></a></li>
+                        <li class="header__item"><a href="#"><img src="img/search.svg" alt="search"></a></li>
+                    </ul>
+                    <ul class="header__right">
+                        <li class="header__item" tabindex="6"><a href="#"></a>
+                            <details class="catalog-menu">
+                                <summary><img src="img/menu.svg" alt="menu"></summary>
+                                <nav class="header__menu">
+                                    <h2 class="menu-head">MENU</h2>
+                                    <h3 class="list-man-head">MAN</h3>
+                                    <ul class="list-man">
+                                        <li class="list-man__item"><a class="menu__link" href="#">Accessories</a></li>
+                                        <li class="list-man__item"><a class="menu__link" href="#">Bags</a></li>
+                                        <li class="list-man__item"><a class="menu__link" href="#">Denim</a></li>
+                                        <li class="list-man__item"><a class="menu__link" href="#">T-Shirts</a></li>
+                                    </ul>
+                                    <h3 class="list-man-head">WOMAN</h3>
+                                    <ul class="list-man">
+                                        <li class="list-man__item"><a class="menu__link" href="#">Accessories</a></li>
+                                        <li class="list-man__item"><a class="menu__link" href="#">Jackets & Coats</a>
+                                        </li>
+                                        <li class="list-man__item"><a class="menu__link" href="#">Polos</a></li>
+                                        <li class="list-man__item"><a class="menu__link" href="#">T-Shirts</a></li>
+                                        <li class="list-man__item"><a class="menu__link" href="#">Shirts</a></li>
+                                    </ul>
+                                    <h3 class="list-man-head">KIDS</h3>
+                                    <ul class="list-man">
+                                        <li class="list-man__item"><a class="menu__link" href="#">Accessories</a></li>
+                                        <li class="list-man__item"><a class="menu__link" href="#">Jackets & Coats</a>
+                                        </li>
+                                        <li class="list-man__item"><a class="menu__link" href="#">Polos</a></li>
+                                        <li class="list-man__item"><a class="menu__link" href="#">T-Shirts</a></li>
+                                        <li class="list-man__item"><a class="menu__link" href="#">Shirts</a></li>
+                                        <li class="list-man__item"><a class="menu__link" href="#">Bags</a></li>
+                                    </ul>
+                                </nav>
+                            </details>
+                        </li>
+                        <li class="header__item"><a href="registration.html"><img src="img/login.svg" alt="login"></a>
+                        </li>
+                        <li class="header__item"><a href="product_cart.html"><img src="img/bascet.svg" alt="bascet"></a>
+                        </li>
+                    </ul>
+                </nav>
+            </header>
+
+            <main>
+
+                <section class="head">
+                    <div class="head__wrap container">
+                        <h1 class="head__heading">REGISTRATION</h1>
+                    </div>
+                </section>
+
+                <section class="registration container">
+                    <div class="registration__form">
+                        <form action="#">
+                            <p>Your Name</p>
+                            <input type="text" placeholder="First Name" name="name" title="Name"><br>
+                            <input type="text" placeholder="Last Name" name="Last name" title="Last name"><br>
+                            <div class="gender">
+                                <input type="radio" id="male" name="gender" value="Male">
+                                <label for="male">Male</label>
+                                <input type="radio" id="female" name="gender" value="Female">
+                                <label for="female">Female</label>
+                            </div>
+                            <p>Login details</p>
+                            <input type="email" placeholder="Email"><br>
+                            <input type="password" minlength="8" placeholder="Password">
+                            <p>Please use 8 or more characters, with at least 1 number and a mixture of uppercase
+                                and lowercase letters</p>
+                        </form>
+                        <button>JOIN NOW</button>
+                    </div>
+                    <div class="registration__text">
+                        <h3>
+                            LOYALTY HAS ITS PERKS
+                        </h3>
+                        <p>
+                            Get in on the loyalty program where you can earn points and unlock serious perks. Starting
+                            with these as soon as you join:
+                        </p>
+                        <ul>
+                            <li>15% off welcome offer
+                            </li>
+                            <li>Free shipping, returns and exchanges on all orders
+
+                            </li>
+                            <li>$10 off a purchase on your birthday
+
+                            </li>
+                            <li>Early access to products</li>
+                            <li>Exclusive offers & rewards</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section class="subscriptions">
+                    <div class="subscriptions__wrap container">
+                        <div class="subscriptions__slogan">
+                            <img src="img/Intersect.png" alt="image">
+                            <p class="subscriptions__text">“Vestibulum quis porttitor dui! Quisque viverra nunc mi,
+                                <span class="subscriptions__text_italic">a pulvinar
+                                    purus
+                                    condimentum</span> “
+                            </p>
+                        </div>
+                        <div class="subscriptions__box">
+                            <h2 class="subscriptions__heading">SUBSCRIBE <br>
+                                <span class="subscriptions__subtitle">FOR OUR NEWLETTER AND PROMOTION</span>
+                            </h2>
+                            <form class="subscriptions__form" action="#">
+                                <input class="subscriptions__input" type="email" placeholder="Enter Your Email">
+                                <a href="#" class="subscriptions__button">Subscribe</a>
+                            </form>
+                        </div>
+                    </div>
+                </section>
+
+            </main>
+
+        </div>
+
+        <footer class="footer">
+
+            <div class="footer__wrap container">
+                <p class="copy">© 2021 Brand All Rights Reserved.</p>
+                <div class="socials">
+                    <a href="#" class="footer-button">
+                        <img class="footer-social-image" src="img/facebook.svg" alt="facebook">
+                    </a>
+                    <a href="#" class="footer-button">
+                        <img class="footer-social-image" src="img/instagram.svg" alt="instagram">
+                    </a>
+                    <a href="#" class="footer-button">
+                        <img class="footer-social-image" src="img/pppp.svg" alt="Pp">
+                    </a>
+                    <a href="#" class="footer-button">
+                        <img class="footer-social-image" src="img/twitter.svg" alt="twitter">
+                    </a>
+                </div>
+            </div>
+
+        </footer>
+
+    </div>
+
+</body>
+
+</html>
