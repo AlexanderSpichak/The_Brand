@@ -196,20 +196,6 @@ summary {
   line-height: 38px;
   color: #222222;
   margin-left: 16px;
-  font-size: 20px;
-}
-
-@media (min-width: 767px) {
-  .promo__text {
-    font-size: 24px;
-    font-size: calcFluidFontSize(20px, 32px, 767px, 1156px);
-  }
-}
-
-@media (min-width: 1156px) {
-  .promo__text {
-    font-size: 32px;
-  }
 }
 
 .promo__text_black {
@@ -217,20 +203,6 @@ summary {
   font-size: 48px;
   line-height: 58px;
   color: #222222;
-  font-size: 38px;
-}
-
-@media (min-width: 767px) {
-  .promo__text_black {
-    font-size: 44px;
-    font-size: calcFluidFontSize(38px, 48px, 767px, 1156px);
-  }
-}
-
-@media (min-width: 1156px) {
-  .promo__text_black {
-    font-size: 48px;
-  }
 }
 
 .promo__text_pink {
@@ -1465,9 +1437,11 @@ summary {
   .promo__text {
     line-height: 24px;
     margin-right: 15px;
+    font-size: 24px;
   }
-  .promo__text__black {
+  .promo__text_black {
     line-height: 46px;
+    font-size: 44px;
   }
   .promo__wrap {
     background-position-x: -6vw;
@@ -1622,6 +1596,15 @@ summary {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+    min-height: 364px;
+  }
+  .promo__text {
+    font-size: 20px;
+    line-height: 24px;
+  }
+  .promo__text_black {
+    font-size: 38px;
+    line-height: 46px;
   }
   .catalog__section-bg:not(:last-child) {
     width: 100%;
@@ -1633,9 +1616,6 @@ summary {
   .catalog {
     padding-top: 64px;
     padding-bottom: 64px;
-  }
-  .promo__wrap {
-    min-height: 364px;
   }
   .cards-items {
     padding-bottom: 96px;

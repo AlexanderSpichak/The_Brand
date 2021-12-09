@@ -1,16 +1,3 @@
-@mixin fluidFontSize($f-min, $f-max, $w-min, $w-max, $fallback: false) {
-    font-size: $f-min;
-
-    @media (min-width: $w-min) {
-        @if ($fallback) {
-            font-size: $fallback;
-        }
-        font-size: calcFluidFontSize($f-min, $f-max, $w-min, $w-max);
-    }
-    @media (min-width: $w-max) {
-        font-size: $f-max;
-    }
-}
 * {
     margin: 0;
     padding: 0;
@@ -149,13 +136,11 @@ summary {
         line-height: 38px;
         color: #222222;
         margin-left: 16px;
-        @include fluidFontSize(20px, 32px, 767px, 1156px, 24px);
         &_black {
             font-weight: 900;
             font-size: 48px;
             line-height: 58px;
             color: #222222;
-            @include fluidFontSize(38px, 48px, 767px, 1156px, 44px);
         }
         &_pink {
             color: #f16d7f;
@@ -1085,8 +1070,10 @@ summary {
     .promo__text {
         line-height: 24px;
         margin-right: 15px;
-        &__black {
+        font-size: 24px;
+        &_black {
             line-height: 46px;
+            font-size: 44px;
         }
     }
     .promo__wrap {
@@ -1209,6 +1196,15 @@ summary {
     .promo__wrap {
         background-image: none;
         justify-content: center;
+        min-height: 364px;
+    }
+    .promo__text {
+        font-size: 20px;
+        line-height: 24px;
+        &_black {
+            font-size: 38px;
+            line-height: 46px;
+        }
     }
     .catalog__section-bg:not(:last-child) {
         width: 100%;
@@ -1220,9 +1216,6 @@ summary {
     .catalog {
         padding-top: 64px;
         padding-bottom: 64px;
-    }
-    .promo__wrap {
-        min-height: 364px;
     }
     .cards-items {
         padding-bottom: 96px;
