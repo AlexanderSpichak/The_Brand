@@ -5,7 +5,7 @@
         @if ($fallback) {
             font-size: $fallback;
         }
-        font-size: calcFluidFontSize($f-min, $f-max, $w-min, $w-max, px);
+        font-size: calcFluidFontSize($f-min, $f-max, $w-min, $w-max);
     }
     @media (min-width: $w-max) {
         font-size: $f-max;
@@ -53,10 +53,18 @@ summary {
     &__left {
         display: flex;
         align-items: center;
+        & li:not(:first-child) {
+            &:hover {
+                opacity: 0.8;
+            }
+        }
     }
     &__right {
         display: flex;
         align-items: center;
+        & .header__item:hover:not(:first-child) {
+            opacity: 0.8;
+        }
     }
     &__item:not(:last-child) {
         margin-right: 33px;
@@ -103,16 +111,30 @@ summary {
             }
         }
     }
+    & summary::after {
+        content: url(img/Vector.svg);
+        position: absolute;
+        width: 12px;
+        height: 12px;
+        z-index: 999;
+        top: 83px;
+        right: 11px;
+        display: none;
+    }
+    & details[open] {
+        summary::after {
+            display: block;
+        }
+    }
 }
 .promo {
     background-color: #f1e4e6;
     &__wrap {
         background-image: url(img/man_promo.png);
         background-repeat: no-repeat;
-        background-position-x: -12vw;
         background-position-y: bottom;
         background-size: contain;
-        height: calc(100vh - 75px);
+        height: 764px;
         display: flex;
         justify-content: end;
         align-items: center;
@@ -262,8 +284,11 @@ summary {
             color: #ffffff;
         }
         &:hover {
-            .hidden-button__text {
-                border-bottom: 1px solid #ffffff;
+            background-color: #f8f3f4;
+            border: none;
+            & p,
+            img {
+                filter: invert(0.7);
             }
         }
     }
@@ -292,13 +317,19 @@ summary {
             }
         }
     }
-    &__heading a {
-        font-weight: normal;
-        font-size: 13px;
-        line-height: 16px;
-        color: #000000;
-        padding-top: 26px;
+
+    &__heading {
+        padding-top: 24px;
         padding-bottom: 13px;
+        font-size: 13px;
+        font-weight: normal;
+        line-height: 16px;
+        & a {
+            color: #000000;
+            &:hover {
+                color: #f16d7f;
+            }
+        }
     }
     &__text {
         font-weight: 300;
@@ -454,6 +485,10 @@ summary {
         padding: 15px 20px;
         border-radius: 0 23px 23px 0;
         border: none;
+        cursor: pointer;
+        &:hover {
+            background-color: rgba(241, 109, 127, 0.767);
+        }
     }
 }
 .footer {
@@ -495,6 +530,7 @@ summary {
 .wrapper {
     display: flex;
     flex-direction: column;
+    height: 100vh;
 }
 .top {
     flex-grow: 1;
@@ -806,6 +842,8 @@ summary {
                 font-size: 22px;
                 line-height: 26px;
                 color: #575757;
+                display: flex;
+                position: relative;
             }
             & p:not(:first-child) {
                 margin-top: 6px;
@@ -813,10 +851,14 @@ summary {
             &--pink {
                 color: #ef5b70;
             }
-            &--border {
-                padding: 2px 16px;
+            & input {
+                box-sizing: border-box;
+                width: 43px;
                 margin-left: 24px;
-                border: 1px solid #a4a4a4;
+                padding: 1px 16px;
+                border-radius: 0;
+                border: 1px solid #eaeaea;
+                outline: none;
             }
         }
         & .card__button {
@@ -841,6 +883,11 @@ summary {
             font-size: 14px;
             line-height: 17px;
             color: #000000;
+            &:hover {
+                background: #f16d7f;
+                border: none;
+                color: #ffffff;
+            }
         }
     }
 }
@@ -918,6 +965,9 @@ summary {
             width: max-content;
             align-self: center;
             cursor: pointer;
+            &:hover {
+                background-color: rgba(241, 109, 127, 0.767);
+            }
         }
         &--pink {
             color: #f16d7f;
@@ -992,6 +1042,9 @@ summary {
             &::after {
                 content: url(img/right__arrow.svg);
                 margin-left: 20px;
+            }
+            &:hover {
+                background-color: rgba(241, 109, 127, 0.767);
             }
         }
     }
@@ -1149,7 +1202,7 @@ summary {
         justify-content: space-around;
     }
 }
-@media (max-width: 767px) {
+@media (max-width: 910px) {
     .header__right .header__item:not(:last-child) {
         display: none;
     }
@@ -1288,7 +1341,7 @@ summary {
         padding: 9px 18px;
     }
     .main-content__input .checkout-box {
-        margin-left: 0;
+        margin-left: 15px;
     }
     .registration {
         flex-wrap: wrap;
@@ -1298,5 +1351,10 @@ summary {
     }
     .registration__form {
         margin-right: 0;
+    }
+}
+@media (max-width: 757px) {
+    .main-content__input .checkout-box {
+        margin-left: 0;
     }
 }
